@@ -1,0 +1,1299 @@
+@import 'variables';
+
+@font-face {
+  font-display: swap;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/Lato-Regular.woff') format('woff'),
+  url('../fonts/Lato-Regular.ttf') format('truetype');
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+}
+
+//HEADER 
+.header{
+  position: absolute;
+  padding:1rem 2rem;
+  width:100%;
+
+  @media screen and (min-width: 700px){
+    padding-top: 7rem;
+}
+
+  &__logo{
+    display:block;
+    cursor: pointer;
+    width:6rem;
+    height: 6rem;
+    position: absolute;
+    z-index: 3;
+    @media screen and (min-width: 700px){
+      height: 10rem;
+      width: 10rem;
+      position: absolute;
+      left:50%;
+      top:0;
+      transform: translateX(-50%);
+      margin-top: 3.5rem;
+      z-index: 12;
+    
+    }
+  }
+
+  &__link{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.2;
+    font-size: 1.8rem;
+    margin-bottom: 3.8rem;
+    color: $primary-color;
+    cursor: url(../images/cursor.png), auto;
+
+    &:hover{
+      color: $green-color;
+    }
+
+    @media screen and (min-width: 700px){
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width:100%;
+    top:100%;
+    right:0;
+
+     @media screen and (min-width: 700px){
+        display: flex;
+        position:relative;
+        justify-content: center;
+        width:80%;
+        margin:0 auto;
+        :not(:last-child){
+          margin-right: 7rem;
+        }
+        :nth-child(2){
+          margin-right: 30%;
+        }
+        
+    }
+
+    @media screen and (min-width: 1000px){
+      width:70%;
+    }
+    @media screen and (min-width: 1200px){
+      width:50%;
+    }
+
+
+  }
+}
+
+.nav--active{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  height: 100vh;
+  padding-top: 20%;
+}
+
+.pressed .line__top {
+  transform: rotate(135deg);
+  transform-origin: center center;
+  position: absolute;
+  top: 6px;
+}
+.pressed .line__middle {
+  opacity: 0;
+  display:none;
+}
+.pressed .line__bottom {
+  transform: rotate(-135deg);
+  transform-origin: center center;
+  position: absolute;
+  top: 6px;
+}
+
+
+.burger{
+  display:block;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  border:none;
+  outline: none;
+  position: absolute;
+  right:20px;
+  top:20px;
+  z-index: 10;
+  height: 25px;
+  width:30px;
+
+  @media screen and (min-width: 700px){
+      display:none;
+  }
+
+  span{
+      display:block;
+      background-color: $green-color;
+      width: 100%;
+      height: 3px;
+      margin-top:3px;
+  }
+}
+
+// HERO 
+.hero{
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position:relative;
+  @media screen and (min-width: 700px){
+    height: 80vh;
+}
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $white;
+    line-height: 1.2;
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 700px){
+      font-size: 4rem;
+    }
+    @media screen and (min-width: 1024px){
+      font-size: 6rem;
+      bottom: 6rem;
+    }
+  }
+}
+
+//TEXT BLOCK
+.text{
+  background-color: $block-color;
+  padding:2rem;
+  text-align: center;
+  @media screen and (min-width: 700px){
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+}
+
+  &__wrapper{
+    @media screen and (min-width: 1000px){
+      margin:0 auto;
+      width: 70%;
+    }
+  }
+}
+
+.text__heading{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $heading-color;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.text__para{
+  font-size: 1.6rem;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+// GRID SECTION
+
+.grid__row{
+  display:flex;
+
+  @media screen and (max-width: 426px){
+    flex-direction: column;
+  }
+
+  &--reverse{
+    @media screen and (max-width: 426px){
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.grid__img{
+  flex:1;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  @media screen and (max-width: 426px){
+    width:100%;
+    min-height: 40vh;
+  }
+
+  &--desk{
+    @media screen and (max-width: 1023px){
+      display:none;
+    }
+  }
+
+  img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.grid__content{
+  width:30%;
+  display:flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 426px){
+    min-width:100%;
+  }
+
+  @media screen and (max-width: 1024px){
+    width:50%;
+  }
+
+  &-heading{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $heading-color;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  &-para{
+    font-size: 1.6rem;
+    color: $text-color;
+    line-height: 1.6;
+    width:100%;
+  }
+
+
+
+  &-text{
+    padding:2rem;
+    text-align: center;
+    height: 38rem;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+      content: '';
+      display:block;
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      top:100%;
+      left:50%;
+      transform: translateX(-50%);
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-top: 18px solid $white;
+    }
+  }
+
+  &-img{
+    height:50%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+//SLIDER 
+.slider{
+  position:relative;
+  overflow: hidden;
+  min-height: 50vh;
+
+  &__container{
+    height: 100%;
+  }
+
+
+  &__slide{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding:0 3rem;
+    @media screen and (min-width: 1025px){
+      width:60%;
+    }
+
+    &__heading{
+      font-size: 1.8rem;
+      color:$heading-color;
+
+      span{
+        color: $text-color;
+      }
+    }
+
+    &__text{
+      font-size: 2.4rem;
+      color: $text-color;
+      line-height: 1.4;
+    }
+
+  }
+
+  &__buttons{
+    display:flex;
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    transform: translateX(-50%);
+
+    button{
+      border-radius: 50%;
+      border: 1px solid $button-color;
+      width:15px;
+      height: 15px;
+      margin-right: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.active-button{
+  background-color: $button-color;
+  color: $button-color;
+}
+
+// SHOP 
+.shop{
+  display:flex;
+  //height: 55vh;
+  //position:relative;
+
+  @media screen and (max-width: 1023px){
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1023px){
+    height: 55vh;
+  }
+
+  &__left{
+    flex:1;
+    display:flex;
+
+    & > a {
+      width:30%;
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1023px){
+      // min-height: 50vh;
+      height: 50vh;
+    }
+
+    @media screen and (max-width: 426px){
+      //min-height: 30vh;
+      height: 30vh;
+    }
+
+    &__top{
+      height: 50%;
+      display: flex;
+      a{
+        flex:1;
+      }
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+
+      &-left{
+        flex:1;
+        background-size: cover;
+        background-position: center center;
+        position:relative;
+        height: 100%;
+
+        &::before {
+          content:url(../images/shop_bike.png);
+          position: absolute;
+          width: 20%; 
+          //height:20%;
+          top:50%; left:50%;
+          transform: translate(-50%, -50%);
+          opacity:0;
+          transition: all .5s;
+          z-index: 11;
+  
+      }
+  
+      &:hover:before {
+        opacity: 1;
+    }
+
+        &:after {
+          content:'';
+          position: absolute;
+          width: 100%; height:100%;
+          top:0; left:0;
+          background:rgba($green-color,0.7);
+          opacity: 0;
+          transition: all .4s;
+          z-index: 10;
+      }
+  
+      &:hover:after {
+          opacity: 1;
+      }
+      }
+
+      &-right{
+        flex:1;
+        background-size: cover;
+        background-position: center center;
+        position:relative;
+        height: 100%;
+
+        &::before {
+          content:url(../images/shop_bike.png);
+          position: absolute;
+          width: 20%; 
+          //height:20%;
+          top:50%; left:50%;
+          transform: translate(-50%, -50%);
+          opacity:0;
+          transition: all .5s;
+          z-index: 11;
+  
+      }
+  
+      &:hover:before {
+        opacity: 1;
+    }
+
+        &:after {
+          content:'';
+          position: absolute;
+          width: 100%; height:100%;
+          top:0; left:0;
+          background:rgba($green-color,0.7);
+          opacity: 0;
+          transition: all .4s;
+          z-index: 10;
+      }
+  
+      &:hover:after {
+          opacity: 1;
+      }
+      }
+    }
+
+    &__bottom{
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      position:relative;
+
+      &::before {
+        content:url(../images/shop_bike.png);
+        position: absolute;
+        width: 20%; 
+        //height:20%;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        opacity:0;
+        transition: all .5s;
+        z-index: 11;
+
+    }
+
+    &:hover:before {
+      opacity: 1;
+  }
+
+      &:after {
+        content:'';
+        position: absolute;
+        width: 100%; height:100%;
+        top:0; left:0;
+        background:rgba($green-color,0.7);
+        opacity: 0;
+        transition: all .4s;
+        z-index: 10;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+      @media screen and (max-width: 426px){
+        height: 100%;
+      }
+    }
+
+    &__tiles{
+      flex:1;
+      display: flex;
+      flex-direction: column;
+
+      & > a {
+        flex:1;
+        height: 100%;
+      }
+    }
+
+    &__side{
+      width:100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+
+      &::before {
+        content:url(../images/shop_bike.png);
+        position: absolute;
+        width: 20%; 
+        //height:20%;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        opacity:0;
+        transition: all .5s;
+        z-index: 11;
+
+    }
+
+    &:hover:before {
+      opacity: 1;
+  }
+
+      &:after {
+        content:'';
+        position: absolute;
+        width: 100%; height:100%;
+        top:0; left:0;
+        background:rgba($green-color,0.7);
+        opacity: 0;
+        transition: all .4s;
+        z-index: 10;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+
+
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+    }
+  }
+
+  &__right{
+    flex:1;
+    display:flex;
+    & > a{
+      width:30%;
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1023px){
+      //min-height: 50vh;
+      height: 50vh;
+    }
+
+    @media screen and (max-width: 426px){
+      //min-height: 30vh;
+      height: 30vh;
+    }
+
+    &__side{
+      width:100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      position:relative;
+
+      &::before {
+        content:url(../images/shop_bike.png);
+        position: absolute;
+        width: 20%; 
+        //height:20%;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        opacity:0;
+        transition: all .5s;
+        z-index: 11;
+
+    }
+
+    &:hover:before {
+      opacity: 1;
+  }
+
+      &:after {
+        content:'';
+        position: absolute;
+        width: 100%; height:100%;
+        top:0; left:0;
+        background:rgba($green-color,0.7);
+        opacity: 0;
+        transition: all .4s;
+        z-index: 10;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+    }
+
+    &__tiles{
+      flex:1;
+      display: flex;
+      flex-direction: column;
+
+      & > a {
+        width:100%;
+        height: 50%;
+        @media screen and (max-width: 426px){
+          height: 100%;
+        }
+      }
+    }
+
+    &__top{
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      position:relative;
+
+      &::before {
+        content:url(../images/shop_bike.png);
+        position: absolute;
+        width: 20%;
+        // height:20%;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        opacity:0;
+        transition: all .5s;
+        z-index: 11;
+
+    }
+
+    &:hover:before {
+      opacity: 1;
+  }
+
+      &::before {
+        content:url(../images/shop_bike.png);
+        position: absolute;
+        width: 20%; 
+        //height:20%;
+        top:50%; left:50%;
+        transform: translate(-50%, -50%);
+        opacity:0;
+        transition: all .5s;
+        z-index: 11;
+
+    }
+
+    &:hover:before {
+      opacity: 1;
+  }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%; height:100%;
+        top:0; left:0;
+        background:rgba($green-color,0.7);
+        opacity: 0;
+        transition: all .4s;
+        z-index: 10;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+      @media screen and (max-width: 426px){
+        height: 100%;
+      }
+    }
+
+    &__bottom{
+      height: 50%;
+      display: flex;
+
+      & > a {
+        flex:1;
+      }
+
+      @media screen and (max-width: 426px){
+        display: none;
+      }
+
+      &-left{
+        flex:1;
+        background-size: cover;
+        background-position: center center;
+        position:relative;
+        width:100%;
+        height: 100%;
+
+        &::before {
+          content:url(../images/shop_bike.png);
+          position: absolute;
+          width: 20%; 
+          //height:20%;
+          top:50%; left:50%;
+          transform: translate(-50%, -50%);
+          opacity:0;
+          transition: all .5s;
+          z-index: 11;
+  
+      }
+  
+      &:hover:before {
+        opacity: 1;
+    }
+
+        &:after {
+          content:'';
+          position: absolute;
+          width: 100%; height:100%;
+          top:0; left:0;
+          background:rgba($green-color,0.7);
+          opacity: 0;
+          transition: all .4s;
+          z-index: 10;
+      }
+  
+      &:hover:after {
+          opacity: 1;
+      }
+      }
+
+      &-right{
+        flex:1;
+        background-size: cover;
+        background-position: center center;
+        position:relative;
+        width:100%;
+        height: 100%;
+
+        &::before {
+          content:url(../images/shop_bike.png);
+          position: absolute;
+          width: 20%; 
+          top:50%; left:50%;
+          transform: translate(-50%, -50%);
+          opacity:0;
+          transition: all .5s;
+          z-index: 11;
+  
+      }
+  
+      &:hover:before {
+        opacity: 1;
+    }
+
+        &:after {
+          content:'';
+          position: absolute;
+          width: 100%; height:100%;
+          top:0; left:0;
+          background:rgba($green-color,0.7);
+          opacity: 0;
+          transition: all .4s;
+          z-index: 10;
+      }
+  
+      &:hover:after {
+          opacity: 1;
+      }
+      }
+    }
+  }
+}
+
+//DISCOVER 
+
+.discover{
+  position: relative;
+  background-color: $discover-color;
+  text-align: center;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  &__btn{
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none;
+    color: $white;
+    border: 1px solid $white;
+    outline:none;
+    cursor: pointer;
+    padding: 2rem 6rem;
+    transition: all .7s;
+
+    &:hover{
+      background-color: $green-color;
+      border: 1px solid transparent;
+    }
+
+  }
+}
+
+.subscribe{
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  text-align: center;
+  @media screen and (max-width: 448px){
+    padding: 2rem;
+  }
+
+  &__logo{
+    margin-bottom: 4rem;
+    width: 10rem;
+    height: 10rem;
+    margin:0 auto;
+
+    img{
+      width:100%;
+    }
+  }
+
+  &__heading{
+    font-size: 2.4rem;
+    color: $text-color;
+    font-style: italic;
+    line-height: 1.4;
+    font-weight: normal;
+    margin-bottom: 4rem;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 448px){
+      flex-direction: column;
+    }
+
+    &-input{
+      padding:3rem;
+      border: 1px solid $placeholder-color;
+      margin-right: 1rem;
+      width:25%;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      @media screen and (max-width: 1000px){
+        width: 50%;
+      }
+      @media screen and (max-width: 448px){
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      &::placeholder{
+        color: $placeholder-color;
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 1.2;
+      }
+    }
+
+    &-button{
+      background-color: $green-color;
+      color: $white;
+      text-transform: uppercase;
+      border: none;
+      padding: 2.5rem 4.5rem;
+      font-size: 2rem;
+      font-weight: 300;
+      cursor: pointer;
+      transition: all .7s;
+
+      &:hover{
+        background-color: $discover-color;
+      }
+    }
+  }
+
+}
+
+//FOOTER 
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background-color: $block-color;
+  @media screen and (min-width: 700px){
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 4rem 3rem;
+  }
+  &__icons{
+    background-color: $green-color;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 700px){
+      width: 100%;
+    }
+    @media screen and (min-width: 1000px){
+      //width: 20%;
+      order: 1;
+      flex:1;
+    }
+  }
+
+  &__address{
+    color: $text-color;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 700px){
+      margin-right: auto;
+      text-align: left;
+    }
+    @media screen and (min-width: 1000px){
+      order: 0;
+      flex:1;
+    }
+
+    a{
+      text-decoration: none;
+      color: $text-color;
+      font-weight: bold;
+    }
+  }
+
+  &__credits{
+    font-size: 1.4rem;
+    color: $text-color;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 700px){
+      text-align: left;
+    }
+    @media screen and (min-width: 1000px){
+      order: 2;
+      flex:1;
+    }
+  }
+}
+
+
+//ABOUT PAGE
+.breadcrumb{
+  background-color: $block-color;
+  padding-left: 2rem;
+  @media screen and (min-width: 1025px){
+    padding-left: 22rem;
+  }
+  &__nav{
+    a + a::before{
+      content: "/\00a0";
+    }
+  
+  }
+
+  &__link{
+    font-size: 1.6rem;
+    line-height: 2.1;
+    text-decoration: none;
+
+    &--home {
+      color: $green-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &--visited {
+      color: $heading-color;
+    }
+  }
+}
+
+.active-accordion{
+  background-color: $white;
+}
+button.content__side__accordion-button--plus::after{
+  content: '\002B';
+  position: absolute;
+  right: 2rem;
+  bottom: 0;
+  height: 100%;
+  font-size: 2.5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.active-accordion::after{
+  content: '\2212';
+  position: absolute;
+  right: 2rem;
+  bottom: 0;
+  height: 100%;
+  font-size: 2.5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  display:flex;
+  flex-direction: column;
+  background-color: $block-color;
+  @media screen and (min-width: 1024px){
+    padding: 2rem 13rem;
+    flex-direction: row;
+  }
+
+  &__side{
+    flex: 1;
+    order: 2;
+    @media screen and (min-width: 700px){
+      display: flex;
+      padding-left: 2rem;
+      padding-bottom: 6rem;
+    }
+    @media screen and (min-width: 1024px){
+      order: 1;
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+
+    &__box{
+      background-color: $white;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      position: relative;
+      @media screen and (min-width: 700px){
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        height: 42rem;
+      }
+
+      @media screen and (min-width: 1024px){
+        flex-grow: 0;
+        height: 50rem;
+      }
+
+      &-text{
+        padding-top: 3rem;
+        position: relative;
+        @media screen and (min-width: 700px){
+          padding-left: 2rem;
+          padding-bottom: 2rem;
+          padding-right: 2rem;
+          flex: 1;
+
+          &::after{
+            content: '';
+            display:block;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top:100%;
+            left:50%;
+            transform: translateX(-50%);
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-top: 18px solid $white;
+          }
+        }
+      }
+
+      &-heading{
+        font-size: 1.8rem;
+        color: $heading-color;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      &-para{
+        font-size: 1.6rem;
+        color: $text-color;
+        line-height: 1.8;
+      }
+
+      &-img{
+        width: 100%;
+        height: 40%;
+        background-size: cover;
+        background-position: center center;
+        @media screen and (max-width: 699px){
+          display: none;
+        }
+      }
+    }
+
+    &__accordion{
+      background-color: $white;
+      margin: 2rem;
+      @media screen and (min-width: 700px){
+        flex: 1;
+      }
+
+      @media screen and (min-width: 1024px){
+        margin: 0;
+        flex-grow: 0;
+      }
+
+
+      &-button{
+        position:relative;
+        width:100%;
+        color: $green-color;
+        background-color: $white;
+        font-size: 1.6rem;
+        line-height: 2.1;
+        padding: 1.3rem 2rem;
+        text-align: left;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid $green-color;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover{
+          background-color: $block-color;
+        }
+      }
+
+      &-panel{
+        font-size: 1.6rem;
+        color: $text-color;
+        line-height: 1.5;
+        padding: 2rem;
+        display: none;
+      }
+    }
+  }
+
+  &__main{
+    flex: 3;
+    order: 1;
+    @media screen and (min-width: 1024px){
+      order: 2;
+    }
+
+    &__heading {
+      line-height: 1.2;
+      color: $heading-color;
+      padding: 2rem;
+
+      &--first {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 2.4rem;
+      }
+
+      &--second{
+        line-height: 1.6;
+        font-size: 2.2rem;
+      }
+
+      &--third{
+        font-size: 1.8rem;
+        line-height: 1.8;
+      }
+    }
+
+    &__para {
+      color: $text-color;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      padding: 0 2rem;
+      margin-bottom: 2rem;
+
+      a{
+        text-decoration: none;
+        color: $green-color;
+        cursor: pointer;
+      }
+       &--first{
+         font-size: 1.8rem;
+         line-height: 1.5;
+         margin-bottom: 2.8rem;
+       }
+    }
+
+    &__img{
+      background-size: cover;
+      background-position: center center;
+      min-height: 40vh;
+      @media screen and (min-width: 700px){
+        margin: 0 2rem;
+      }
+    }
+
+    &__caption{
+      text-align: center;
+      font-size: 1.2rem;
+      color: $text-color;
+      font-style: italic;
+      border-bottom: 1px solid $text-color;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+      @media screen and (min-width: 700px){
+        margin: 0 2rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+  

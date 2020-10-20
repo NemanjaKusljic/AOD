@@ -1,0 +1,16 @@
+<svg id="Icon_Text" data-name="Icon / Text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="57" viewBox="0 0 98 57">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 14px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: Lato;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <image id="shape" x="24" width="52" height="33" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAhCAYAAACWY4jDAAAFEElEQVRYhcVYb2hWZRT/7XWaYWqaYmsFa85FE0lRwrLCMUmRoU7I2gfBQBJWUX6wvklf1AKpfallgvsSuPeTgf1ZgVHhn1CUxgRDXGm5XGxC5kI33X7xsN/jzu593ve+992yAz/ue5/z5znnnnOfc95bQhL/Ax0C8CyAJgBHAPwN4NZEuJGJrdwdmgngAQBZAH0ABgFQuAGg7m4FtAHAVbN5FAN6+knUAOBTAP0BuakA1sZW/6OAVgKYHVsdoWEAZwDsj3HidA3AZgDThQoAjwLYI8nHYhoFUmlK+V90dTV/HsAyANcBPAHg15h0YdRvMnVc18XFBgR3KKRAhuTjJKeQvJfkFY7QOynt5EIFR2luMTZiCynxqrb/i+T9ExTUVdl8vhj98R7bUwBcBFAG4E8APTGJ9FSp9+pDAK+l1U77DkXJHbfdCmieMFH0XDF2xhtQDYCl5t71lbaYVGFUDeA9I/lgUVZCdZgCbar387r2k5xThJ05xsYFczAsCMjmRV5mAmpIDmvjVSR/0+93E/SimEryqHR7Sc4n+ZPutwbk8yLfoTAJwDMAVuhFdeV5E8DPAL4DsFMd/3s13FcA7APwjxplX8xinEoAHATwomyvAnAMwPsAtqtRn9L0cFt90PGPAhiKWctRcpNJvkHyMgujldIrNeVSaJb2mB02ae0FkhcTdr4sHycn9SFXsx1GcYDk1ySb1Tw/InkiYvwwyZnS35LiXdpqbLwtG4djrpNZ7d0sXwYMryP6ntkNFqmGvUM7Sc4IOLLEGBzStZPk7BRZWk3yluT2SbfT2PyE5CkTrNWdId/6xe+V72MCcgYvSeBCwunymeTaSdaSvKb7IyQnRbI0L6C/yOg4G/dIl1qvlZzLiqMfAjZ8NfmHd0kx3AmoVYwekg8HlEPZWa61p0kOaq0pkqXmiH6ZOQ079LSbdD8oW152qcnYrIAvkK89kmv1AVWb43djQClXduz6Lq1f0RP3WbqhIJzMNJJntN5N8hHJ+gF3V8SmO4G7xdsc8MVjo2RcDNVuYbcWTgeELZYFsmPr2pdRg7J0zmTJleLnphSXSK/BlFrofW0R/1CAZ3FacrvdzUnd7AgIWrTnyI6HnxpadP+SydIBUz5rAw63Bew51Bkb9wX4Hjskd9I1y4VqSSdiTWqUlgNYrTv3x25LTGLkH6ujWvFd0/wDwEMAXhbvdQBfGp0aXX+MWRsh18B7AcwFUJ9nTvS+L4Qpo6pA5B77OX7aG7DrR5xNAZ7Hx5I5EOB5VHnvSvVkM/oSk4uy+s+fbzov08R8XSOLpwUAfgfwVkxj9NPVrBhnlD4AUK4RKRd534dddF0KrjEQeRrslZ1sCp2sdELZS4NG2enKmA8T63NEXyitk9zxFDpedl2Mk47W37FHsl7RDWp0Dz2BJGyQjdskyxNkLcqlQ9kIySRhvmns9dCXnLNa+EoNLY3B6aZsWwP8JPgppUu20uiWyGcqhoxnrDCDZkuKoFz3/1Z6fWYqSIMy6VK2pqUIxvexIcUwZtrebg7m9oRjHJq7/ITsUl4XkCkUdaZsOiMzXQhVptFTviMakMObJlNug4M6QRbrI+CTJLeR/MYYc2PLmsCmabHGjE/UHtu0Z4V8aJRPPvgh+YxcATk8ZYbIJPqCZGXARrGolM1CyPnofB2zV776dH/C3Avrvsb4k+imursbON14P1GBROFsuz3cXm5Pf4I6X5xPzrf4e07iX+mAbikUkF5mAAAAAElFTkSuQmCC"/>
+  <text id="Shop_now" data-name="Shop now" class="cls-1" x="49" y="57">Shop now</text>
+</svg>
